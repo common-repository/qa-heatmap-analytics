@@ -1,0 +1,32 @@
+/*
+	table.js用の汎用css
+*/
+table.bl_jsTb {
+	width:100%;
+	border-collapse:collapse;
+	margin:0;
+	border:solid 1px #ddd;
+	text-align: left;
+}
+
+table.bl_jsTb th {
+	padding:10px 10px;
+	font-size:90%;
+	line-height:150%;
+	color:#fff;
+	border:solid 1px #ddd;
+	background:#535b6e;
+	text-align: center;
+}
+
+table.bl_jsTb td {
+	padding:10px 10px;
+	font-size:90%;
+	line-height:150%;
+	border:solid 1px #ddd;
+	background-color: #fff;
+}
+
+table.bl_jsTb a {
+	text-decoration: none;
+}

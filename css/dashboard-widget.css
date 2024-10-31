@@ -1,0 +1,208 @@
+/*
+ * qa-heatmap-analytics
+ */
+
+
+/* --------------
+ * common
+ */
+.msg_no_data {
+	text-align: center;
+	color: #a9a9a9;
+}
+
+.qahm-fa {
+	margin-right: 5px;
+}
+
+.qa-link-section {
+	margin: 10px 0 0 0;
+	text-align: right;
+}
+.qa-link-button {
+  border: 0;
+	border-radius: 4px;
+	padding: 2px 24px;
+	background-color: #eb8281;
+  color: #fff;
+	font-size: 12px;
+  font-weight: bold;
+}
+.qa-link-button:hover {
+  cursor: pointer;
+	background-color: #f9cdc5; 
+	color: #6b7174;
+	font-weight: bold;
+}
+
+.chart-section {
+	margin: 15px 5px 5px 5px;
+}
+
+
+/* --------------
+ * Realtime
+ * #qahm-widget-realtime
+ */
+.realtime-users-section {
+	display: flex;
+	flex-flow: row wrap;
+}
+.realtime-users {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 6px;
+	margin: 6px 6px 0 6px;
+	border-bottom: 1px solid rgba(47, 95, 152, 0.2);
+}
+.realtime-users-term {
+	text-align: center;
+	background-color: #3a3a6b;
+	color: #fff;
+}
+.realtime-users-number {
+	margin-top: 6px;
+	text-align: center;
+	font-size: 24px;
+}
+
+#chart-container-hourly {
+	min-height: 100px;
+	border-bottom: 1px solid rgba(47, 95, 152, 0.2);
+}
+
+.realtime-list-section {
+	margin-top: 10px;
+	max-height: 300px;
+	overflow-y: auto;
+	border-bottom: 1px solid rgba(47, 95, 152, 0.2);
+}
+.list_session_cell {
+	display: flex;
+	flex-direction: column;
+}
+.list_row_info {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: #ebeff2;
+}
+.list_row_info_icon {
+	margin-right: 3px;
+}
+.list_device,
+.list_pvs,
+.list_timeonsite,
+.list_lefttime {
+	margin-right: 8px;
+ }
+.list_column_page {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+
+/* --------------
+ * Visits
+ * #qahm-widget-visits
+ */
+
+.visits-daterange-section p {
+	font-size: 14px;
+}
+.visits-sum-section {
+	display: flex;
+	flex-flow: row wrap;
+}
+.visits-sum {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 6px;
+	margin: 6px 6px 0 6px;
+	border: 1px solid rgba(47, 95, 152, 0.2);
+	border-radius: 3px;
+}
+.visits-sum-term {
+	text-align: center;
+}
+.visits-sum-number {
+	margin-top: 6px;
+	text-align: center;
+	font-size: 24px;
+}
+.chart-section {
+	margin: 15px 5px 5px 5px;
+}
+#chart-container-audience {
+	min-height: 280px;
+	border: 1px solid rgba(47, 95, 152, 0.2);
+	border-radius: 3px;
+}
+#chart-container-channel {
+	min-height: 160px;
+	border: 1px solid rgba(47, 95, 152, 0.2);
+	border-radius: 3px;
+}
+
+
+/* --------------
+ * Growing Landing Page
+ * #qahm-widget-growing
+ */
+ .growing-daterange-section {
+	display: flex;
+	align-items: center;
+  margin-bottom: 10px;
+}
+.growing-daterange-section div {
+	text-align: center;
+}
+.growing-daterange-fa {
+	margin: auto 10px;
+	font-size: 16px;
+}
+.growing-daterange {
+	font-size: 11px;
+}
+.growing-table-section {
+	max-height: 250px;
+	overflow-y: auto;
+	border-bottom: 1px solid rgba(47, 95, 152, 0.2);
+}
+#growing-table {
+	width: 100%;
+}
+#growing-table thead {
+	background-color: rgba(47, 95, 152, 1);
+	color: #fff;
+	position: sticky;
+	top: 0;
+}
+#growing-table tr.row-even {
+	background-color: #f6f7f7;
+}
+
+.growing-pct {
+	text-align: right;
+}
+.growing-positive-fa {
+	color: #008000;
+  margin-left: 2px;
+}
+.growing-unchanged-fa {
+	color: #808080;
+  margin-left: 2px;
+}
+.growing-crown-fa-gold {
+	color: #f8b500;
+	margin-left: 3px;
+}
+.growing-crown-fa-silver {
+	color: #afafb0;
+	margin-left: 3px;
+}
+.growing-crown-fa-bronze {
+	color: #d9b97a;
+	margin-left: 3px;
+}

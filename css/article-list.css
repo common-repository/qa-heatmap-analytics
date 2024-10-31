@@ -1,0 +1,15 @@
+.qahm-article-list-table {
+	min-width: 68px;
+}
+
+.qahm-article-list-table td {
+	padding: 0px 5px 0px 0px;
+}
+
+.qahm-article-list-table .align-right {
+	text-align: right;
+}
+
+.qahm-article-list-table .align-left {
+	text-align: left;
+}

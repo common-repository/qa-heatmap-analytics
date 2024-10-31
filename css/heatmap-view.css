@@ -1,0 +1,324 @@
+html, body {
+	height: 100%;
+}
+
+.frame {
+	position: absolute;
+    width: 100%;
+	height: calc(100% - 70px);
+	box-sizing: border-box;
+    margin-top: 70px;
+	overflow: hidden;
+}
+
+iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*
+	cap.php
+	上部バー
+*/
+#heatmap-bar {
+	position: absolute;
+	display: table;
+	width: 100%;
+	height: 70px;
+	background-color: #1f2823;
+	font-size: 16px;
+	color: #efefef;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#heatmap-bar-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#heatmap-mobile-nav {
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+#heatmap-nav img,
+#heatmap-mobile-nav img {
+    vertical-align: -.125em;
+	margin-left: 1.3em;
+    margin-right: 0.3em;
+}
+
+#heatmap-nav svg,
+#heatmap-mobile-nav svg {
+    margin-right: 0.3em;
+}
+
+#heatmap-nav label,
+#heatmap-mobile-nav label,
+#heatmap-nav ul > li,
+#heatmap-mobile-nav ul > li {
+	color: #efefef;
+}
+
+#heatmap-nav ul,
+#heatmap-mobile-nav ul {
+	list-style: none;
+	display: table;
+	margin: 0 auto;
+	line-height: 1.4;
+}
+
+#heatmap-nav ul > li {
+	position: relative;
+	float: left;
+	margin-right: 1.6em;
+	margin-bottom: 4px;
+    margin-top: 4px;
+	height: 20px;
+}
+
+#heatmap-mobile-nav ul > li {
+	position: relative;
+	float: left;
+	margin-right: 1.25em;
+	margin-bottom: 4px;
+    margin-top: 4px;
+	height: 20px;
+}
+
+#heatmap-nav ul > li label,
+#heatmap-nav ul > li a,
+#heatmap-mobile-nav ul > li label,
+#heatmap-mobile-nav ul > li a {
+	display: inline-block;
+	color: #efefef;
+	text-decoration: none;
+}
+
+#heatmap-nav ul > li select,
+#heatmap-mobile-nav ul > li select {
+	position: relative;
+	top: -1px;
+	height: 24px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #333;
+	padding: 0px;
+}
+
+#heatmap-nav li.separator {
+	height: 22px;
+	border-right: 1px solid #efefef;
+	width: 1px;
+}
+
+#heatmap-nav label:after{
+	background: #aaaaaa;
+	top: 0;
+	width:40px;
+	height: 32px;
+	transition: 0.4s;
+}
+
+#heatmap-nav input:checked + label:after{
+	background:#1abc9c;
+	left: 50px;
+	transition: 0.4s;
+}
+
+#heatmap-nav .heatmap-bar-check,
+#heatmap-mobile-nav .heatmap-bar-check {
+	display: none;
+}
+
+/*
+	cap.php
+	モバイル対応
+*/
+#qahm-mobile-menu > ul {
+	line-height: 0;
+	opacity: 0;
+	visibility: hidden;
+	background: #fff;
+	color: #fff;
+	transition: all 0.6s;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #333;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#qahm-mobile-menu > ul > li {
+	font-size: 16px;
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	border: none;
+
+	/* 閉じている状態 */
+	padding-top: 0;
+	padding-bottom: 0;
+	/* 閉じるアニメーション */
+	transition:
+	border-top     .3s ease-out,
+	padding-top    .3s ease-out,
+	padding-bottom .3s ease-out;
+}
+
+#heatmap-bar #heatmap-nav {
+	display: block;
+	font-size: 14px;
+}
+
+#heatmap-bar #heatmap-mobile-nav {
+	display: none;
+}
+
+#qahm-mobile-menu {
+	display: none;
+}
+
+@media screen and (max-width:834px){
+	#heatmap-bar #heatmap-nav {
+		display: none;
+	}
+
+	#heatmap-bar #heatmap-mobile-nav {
+		display: block;
+	}
+
+	#qahm-mobile-menu {
+		display: block;
+	}
+}
+
+#heatmap-bar .control {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-weight: 400;
+}
+#heatmap-bar .control input {
+	width: 0px;
+	height: 0px;
+}
+#heatmap-bar .control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	background: #e6e6e6;
+	border-radius: 4px;
+}
+#heatmap-bar .control--radio .control__indicator {
+	border-radius: 50%;
+}
+#heatmap-bar .control:hover input ~ .control__indicator,
+#heatmap-bar .control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+#heatmap-bar .control input:checked ~ .control__indicator {
+	background: #1abc9c;
+}
+#heatmap-bar .control input:disabled ~ .control__indicator {
+	background: #e6e6e6;
+	opacity: 0.6;
+	pointer-events: none;
+}
+#heatmap-bar .control__indicator:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+#heatmap-bar .control input:checked ~ .control__indicator:after {
+	display: block;
+}
+#heatmap-bar .control--checkbox .control__indicator:after {
+	left: 6px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+#heatmap-bar .control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+
+/*
+	ヒートマップ表示画面
+*/
+#heatmap-container {
+	pointer-events: none;
+}
+
+#heatmap-attention-scroll {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}
+
+#heatmap-scroll {
+	position: absolute;
+	height: 100%;
+	box-sizing: border-box;
+	width: 10%;
+	min-width: 60px;
+	max-width: 100px;
+	text-align: center;
+	overflow: visible;
+	white-space: nowrap;
+	z-index: 1;
+	top: 0;
+    left: 0;
+}
+
+.heatmap-scroll-font {
+	font-size: 14px;
+	line-height: 1.6;
+	color:#fff;
+	text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;
+}
+
+/* スクロールマップのツールチップ */
+#heatmap-scroll-tooltip {
+    position: fixed;
+	left: 20px;
+	bottom: 20px;
+    z-index: 3;
+	padding: 8px;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 6px;
+    text-align: left;
+}
+
+#heatmap-scroll-data-num {
+	font-size: 1.3em;
+}
+
+#heatmap-attention {
+	position: absolute;
+    width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	z-index: 0;
+	top: 0;
+    left: 0;
+}
+

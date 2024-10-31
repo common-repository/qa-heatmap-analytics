@@ -1,0 +1,121 @@
+/*
+	（共通）font-size, font-weight, text-align, 
+			wrap in table, margin with FontAwesome
+*/
+.qahm_fontsize11 {
+	font-size: 11px;
+}
+.qahm_fontsize10 {
+	font-size: 10px;
+}
+.qahm_fontsize90pct {
+	font-size: 90%;
+}
+.qahm_fontsize80pct {
+	font-size: 80%;
+}
+.qahm_fontsize12em {
+	font-size: 1.2em;
+}
+
+.qahm_font_bold {
+	font-weight: bold;
+}
+
+.qahm_textalign_right {
+	text-align: right;
+}
+.qahm_textalign_center {
+	text-align: center;
+}
+
+table {
+	word-break: normal;
+	word-wrap: break-word;
+}
+
+/* Font Awesome のマージン */
+.qahm_margin-right4 {
+	margin-right: 4px;
+}
+.qahm_bikkuri-mark {
+	margin-right: 3px;
+}
+.qahm_link-mark {
+	margin-left: 2px;
+	font-size: 80%;
+}
+
+
+/*---------- placeholder ----------*/
+::placeholder {
+	color: #bbb;
+}
+/* 旧Edge対応 */
+::-ms-input-placeholder {
+	color: #bbb;
+}
+/* IE対応 */
+:-ms-input-placeholder {
+	color: #bbb;
+}
+
+
+/*
+	RSS
+*/
+
+#qahm-rss h2  {
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	line-height: 1.4;
+	border-bottom: 1px solid #ccd0d4;
+}
+
+#qahm-rss h3  {
+	margin: 0 0 14px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #23282d;
+}
+
+#qahm-rss h2+div  {
+	margin: 12px;
+}
+
+#qahm-rss span {
+	display: inline-block;
+	min-width: 120px;
+}
+
+#qahm-rss a {
+	text-decoration: none;
+	line-height: 1.0;
+}
+
+
+
+/*
+	管理画面やアドミンバー
+*/
+.qahm-admin-page {
+	font-family: Roboto, sans-serif;
+}
+
+#wpadminbar #wp-admin-bar-qahm .ab-icon > img {
+	vertical-align: baseline;
+	opacity: .6;
+}
+
+.qahm-heatmap-link {
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+#qahm-data-list th, #qahm-data-list td {
+	vertical-align: middle;
+}
+
+

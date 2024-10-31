@@ -1,0 +1,111 @@
+#qa-help div.help01 h2.note-version {
+    border-bottom: 1px dotted #ccc;   
+}
+
+.qahm-help-head {
+    font-size: 1.2em;
+    margin: 0 0 6px 0;
+}
+.qahm-help-text {
+    margin: 0;
+}
+.qahm-help-item {
+    margin-bottom: 24px;
+}
+
+#qahm-help-debug {
+    padding: 16px;
+    margin-top: 60px;
+    background-color: #fff;
+    max-width: 600px;
+}
+
+#qa-help h2{
+    padding: 0 1em .5em;
+    border-bottom: 1px solid #999;
+}
+#qa-help h3{
+    padding: 0 1em;
+}
+#qa-help p{
+    padding: .5em 1em .5em 1em ;
+}
+#qa-help div.help01 ul{
+    list-style: disc;
+    margin-left: 35px;
+}
+#qa-help div.h-frame{
+    background-color: #fff; border: 1px solid #999;
+    margin-bottom: 1em;
+}
+#qa-help div.help03 h3{
+    margin: 5px;
+}
+#qa-help div.help03 p{
+    margin-top: 0;
+}
+#qa-help div.help04 table{
+margin: 1em;
+border-collapse: collapse;
+border-spacing: 0 0px;
+word-break: normal;
+}
+#qa-help div.help04 table th {
+padding: .3em;
+text-align: left;
+font-weight: normal;
+background-color: #F4F4F4;
+border: 1px solid #999999;
+width: 30%;
+}
+#qa-help div.help04 table td {
+padding: .3em;
+border: 1px solid #999999;
+}
+#qa-help .wavy-line {
+    text-decoration: wavy underline;
+}
+#qa-help div.help01 {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 5px 0;
+}
+#qa-help div.help01 table{
+    margin: 1em;
+    border-spacing: 0;
+}
+#qa-help div.help01 table tr{
+    font-size: 13px;
+    line-height: 2em;
+}
+#qa-help div.help01 table th{
+    padding-left: 10px;
+    font-weight: normal;
+    text-align: left;
+}
+#qa-help div.help01 table td.yours{
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+}
+#qa-help div.help01 table td.qas{
+    padding-right: 10px;
+}
+#qa-help div.help01 table>tbody>:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+
+/* 英語注意書き用 --------------------------*/
+.english-note-important {
+	background-color: #fff;
+	border-left: 10px solid #F7BEB8;
+}
+
+
+
+@media only screen and (min-width: 576px) {
+    #qa-help div.help04 table th {
+    width: 14em;
+    }
+}

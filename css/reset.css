@@ -1,0 +1,94 @@
+#qahm-container html, #qahm-container body, #qahm-container div, #qahm-container span, #qahm-container object, #qahm-container iframe,
+#qahm-container h1, #qahm-container h2, #qahm-container h3, #qahm-container h4, #qahm-container h5, #qahm-container h6, #qahm-container p, #qahm-container blockquote, #qahm-container pre,
+#qahm-container abbr, #qahm-container address, #qahm-container cite, #qahm-container code,
+#qahm-container del, #qahm-container dfn, #qahm-container em, #qahm-container img, #qahm-container ins, #qahm-container kbd, #qahm-container q, #qahm-container samp,
+#qahm-container small, #qahm-container strong, #qahm-container sub, #qahm-container sup, #qahm-container var,
+#qahm-container b, #qahm-container i,
+#qahm-container dl, #qahm-container dt, #qahm-container dd, #qahm-container ol, #qahm-container ul, #qahm-container li,
+#qahm-container fieldset, #qahm-container form, #qahm-container label, #qahm-container legend,
+#qahm-container table, #qahm-container caption, #qahm-container tbody, #qahm-container tfoot, #qahm-container thead, #qahm-container tr, #qahm-container th, #qahm-container td,
+#qahm-container article, #qahm-container aside, #qahm-container canvas, #qahm-container details, #qahm-container figcaption, #qahm-container figure,
+#qahm-container footer, #qahm-container header, #qahm-container hgroup, #qahm-container menu, #qahm-container nav, #qahm-container section, #qahm-container summary,
+#qahm-container time, #qahm-container mark, #qahm-container audio, #qahm-container video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+#qahm-container body {
+	line-height:1;
+}
+
+#qahm-container article, #qahm-container aside, #qahm-container details, #qahm-container figcaption, #qahm-container figure,
+#qahm-container footer, #qahm-container header, #qahm-container hgroup, #qahm-container menu, #qahm-container nav, #qahm-container section {
+	display:block;
+}
+
+#qahm-container nav ul {
+	list-style:none;
+}
+
+#qahm-container blockquote, #qahm-container q {
+	quotes:none;
+}
+
+#qahm-container blockquote:before, #qahm-container blockquote:after,
+#qahm-container q:before, #qahm-container q:after {
+	content:'';
+	content:none;
+}
+
+#qahm-container a {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+/* change colours to suit your needs */
+#qahm-container ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+/* change colours to suit your needs */
+#qahm-container mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+#qahm-container del {
+	text-decoration: line-through;
+}
+
+#qahm-container abbr[title], #qahm-container dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+
+#qahm-container table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+#qahm-container hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #cccccc;
+	margin:1em 0;
+	padding:0;
+}
+
+#qahm-container input, #qahm-container select {
+	vertical-align:middle;
+}

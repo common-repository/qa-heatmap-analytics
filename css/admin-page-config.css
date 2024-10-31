@@ -1,0 +1,322 @@
+/** 枠組み、hタグ　------------------------------------------ */
+.tab_container {
+    margin: 0;
+    padding: 0 25px;
+}
+.tab_content_item {
+    margin: 10px;
+    padding: 20px 0;
+}
+.tab_content_item_thinbottom {
+    margin: 10px;
+    padding: 20px 0 0 0;
+}
+tab_content hr {
+    border: none;
+    background: linear-gradient(to right, white, #5A6E83, #a1cce4, white);
+    height: 2px;
+}
+.tab_content_description {
+    margin: 0;
+}
+.tab_content_description summary {
+    font-size: 20px;
+    background-color: #CDD4DA;
+    padding: 10px 5px 10px 5px;
+    cursor: pointer;
+}
+.tab_content_description summary:hover, details[open] summary {
+    background-color: #94A1AF;
+    color: #FFFFFF;
+}
+.tab_content_description summary span.el_edit {
+    font-size: 12px;
+    color: #000000;
+}
+.tab_content_description summary:hover span.el_edit {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.tab_content_description details[open] span.el_edit {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.tab_content_description details {
+    margin-bottom: 20px;
+}
+
+
+/** タブ表示切替 ------------------------------------------ */
+/*タブのスタイル*/
+.tab_item {
+    min-width: 165px;
+    height: 50px;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #5A6E83;
+    line-height: 50px;
+    font-size: max(1em, min(16px, 2vw));
+    text-align: center;
+    color: #fff;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+    display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tabs {
+    position: relative;
+}
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+    visibility: hidden;
+    position: absolute;
+    top:50px;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #fdfdfd;
+    padding: 20px;
+}
+.bl_goalbox {
+    border: 1px dotted #0b2e13;
+    padding: 5px;
+    margin: 10px;
+}
+.bl_goalbox table {
+    width: 100%;
+}
+.bl_goalbox table tr,td{
+    vertical-align: top;
+}
+
+
+/* イベント設定：iframeを利用したセレクタ設定 */
+#event-iframe-containar {
+	overflow-x: scroll;
+	width: 100%;
+}
+
+/* イベント設定：吹き出し */
+.event-iframe-tooltip-right {
+	display: none;
+	position: relative;
+	cursor: pointer;
+	word-break: normal;
+	z-index: 1000;
+	padding: 8px;
+	background-color: #000;
+	background-color: hsla(0, 0%, 20%, 0.9);
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.4;
+	border-radius: 6px;
+    text-align: left;
+	margin-left: 0;
+	margin-bottom: -16px;
+}
+
+.event-iframe-tooltip-right:before,
+.event-iframe-tooltip-right {
+	position: absolute;
+	pointer-events: none;
+	-webkit-transform: translateX(12px);
+	-moz-transform:    translateX(12px);
+	transform:         translateX(12px);
+}
+
+.event-iframe-tooltip-right:before {
+	z-index: 1001;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	top: 10px;
+	margin-bottom: 0;
+	margin-left: -32px;
+	border-top-color: transparent;
+	border-right-color: #000;
+	border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#tab_plugin:checked ~ #tab_plugin_content,
+#tab_goal:checked ~ #tab_goal_content,
+#tab_mail:checked ~ #tab_mail_content,
+#tab_google:checked ~ #tab_google_content,
+#tab_attribute:checked ~ #tab_attribute_content,
+#tab_cookie:checked ~ #tab_cookie_content {
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    background-color: #fff;
+    color: #5A6E83;
+}
+.visible_animation {
+    visibility: visible;
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+}
+  @keyframes fade-in {
+      0% {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      50% {
+        visibility: visible;
+        opacity: 0.5;
+      }
+
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+  }
+
+
+#tab_goal_content table th, #tab_goal_content table td,
+#tab_attribute_content table th, #tab_attribute_content table td {
+  padding: 1em 10px 1em 1em;
+  border-right: 1px solid #bbb;
+}
+#tab_goal_content table label,
+#tab_attribute_content table label {
+    display: inline-block;
+    margin-right: 10px;
+}
+#tab_google_content table th, #tab_google_content table td {
+    padding: 1em 10px 1em 1em;
+    text-align: left;
+    border-right: 1px solid #bbb;
+}
+
+/*更新箇所を光らせる */
+.highlight {
+	background-color: #e2d42c;  /* ピカッてした時の背景色 */
+    color: white;
+    font-size: 120%;
+	transition-duration: 0s; /* 即座に背景色を変える */
+}
+
+.bl_eachGtypeBox {
+    margin-top: 20px;
+}
+
+
+/* メール設定 ------------------*/
+.mail_config_inputpart input[type=email] {
+    width: 90%;
+    height: 2.5em;
+    border-radius: 5px;
+}
+.mailselect input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.mailselect input[type=radio] + label {
+    display:inline-block;
+    z-index: 1;
+    margin:-2px;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+
+.mailselect input[type=radio]:checked + label {
+    background-image: none;
+    z-index: 1;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    background-color:#e0e0e0;
+}
+
+#linkto_nl_btn {
+    color:#111;
+    background: #ccc;
+    padding: 8px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#linkto_nl_btn:hover {
+    background: #bbb;
+}
+
+.mail_config_section {
+    padding: 5px 0 25px 0;
+}
+.mail_config_fa {
+    margin-right: 5px;
+}
+.mail_config_inputpart {
+    margin-left: 20px;
+}
+.mail_config_inputpart table {
+    width: 320px;
+}
+.mail_config_inputpart table tr>td>select {
+    width: 85%;
+}
+.mail_config_sbtn {
+    padding: 8px 0;
+}
+.mail_config_sbtn input[type="submit"] {
+    min-width: 100px;
+}
+.mail_config_debtn {
+    padding: 8px 0;
+}
+.mail_config_debtn input[type="submit"] {
+    min-width: 80px;
+    background-color: #444;
+    border: none;
+}
+.mail_config_debtn input[type="submit"]:hover {    
+    background-color: #ff4242;
+}
+.mail_config_toph4 {
+    margin-top: 0;
+}

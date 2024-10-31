@@ -1,0 +1,306 @@
+.tab_wrap{width:100%; margin:40px 0 80px auto;}
+
+
+
+/* グラフ凡例 -----------------------*/
+.grf-legend div {
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.grf-legend ul {
+	text-align: center;
+	margin-left: -10px;
+	letter-spacing: -.4em;
+}
+.grf-legend ul li{
+	display: inline-block;
+	margin-left: 10px;
+	letter-spacing: normal;
+	cursor: default;
+}
+.grf-legend ul li:hover{
+	font-weight: bold;
+	color: #999;
+}
+.pt-undefined {
+	width: 0.8em;
+	height: 1.6em;
+}
+.pt-rect {
+	width: 1.2em;
+	height: 1.2em;
+}
+.pt-rectRounded {
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 5%;
+}
+.pt-circle {
+	width: 1.3em;
+	height: 1.3em;
+	border-radius: 50%;
+}
+.pt-triangle {
+  width: 0;
+  height: 0;
+  border-left: 0.6em solid transparent;
+  border-right: 0.6em solid transparent;
+  border-bottom: 1.2em solid;
+}
+.pt-rectRot {
+	width: 1.1em;
+	height: 1.1em;
+	transform: rotate(45deg);
+}
+
+
+/* 「アクセス推移」欄 -----------------------*/
+.qa-chart-access {
+	background-color: #fffffc;
+	padding: 10px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.chart-container {
+	display:block;
+	height: 300px;
+}
+canvas{
+	width: 100%;
+
+}
+
+.datepicker-frame{
+	position: relative;
+	width: 100%;
+	height: 3em;
+	margin-top: 10px;
+}
+.chart-reportrange{
+	/*position: absolute;*/
+	/*margin: 0 0 0 auto;*/
+	width: 305px;
+	max-width: 100%;
+	text-align: center;
+	background: #fff; 
+	cursor: pointer; 
+	padding: 5px 10px; 
+	border: 1px solid #ccc;
+	top: 5px;
+}
+
+
+
+/* 合計表示欄　-------------*/
+.qa-chart-access-view{
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	flex-wrap:wrap;
+}
+.qa-view-count-box{
+	background-color: #fffffc;
+	padding: 7px;
+	border: 1px solid rgba(000, 076, 113, 0.5);
+	border-radius: 3%;
+	margin: 0 2% 13px 0;
+	min-width: 150px;
+}
+
+.qa-view-count-info{
+	display: block;
+	text-align: center;
+}
+
+.qa-view-count{
+	font-family: 'Titillium Web', sans-serif;
+	display: block;
+	font-size: 40px;
+	color: #555;
+	padding-top: 13px;
+	text-align: center;
+	margin-bottom: 15px;
+	text-shadow:  1px 1px 2px #ccc;
+}
+
+.qa-view-count-success{
+	display: block;
+	text-align: center;
+	color: #47b8e0;
+}
+
+.stats-icons {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	font-size: 16px;
+	line-height: 1;
+	font-style: normal;
+	vertical-align: top;
+	text-align: center;
+	-webkit-transition: color .1s ease-in 0;
+	transition: color .1s ease-in 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* 合計の項目用ツールチップ -----*/
+[data-statstt-text] {
+		position: relative;
+	 }
+
+/**
+ * Tooltip Styles  ( from "common css" )
+ */
+.qa-stats-tooltip:before,
+.qa-stats-tooltip:after {
+	position: absolute;
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	-webkit-transition: 
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-webkit-transform 0.2s ease-in-out;
+	-moz-transition:    
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-moz-transform 0.2s ease-in-out;
+	transition:         
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s ease-in-out;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform:    translate3d(0, 0, 0);
+	transform:         translate3d(0, 0, 0);
+	pointer-events: none;
+}
+
+[data-statstt-text]:hover:before,
+[data-statstt-text]:hover:after,
+[data-statstt-text]:focus:before,
+[data-statstt-text]:focus:after,
+.qa-stats-tooltip:hover:before,
+.qa-stats-tooltip:hover:after,
+.qa-stats-tooltip:focus:before,
+.qa-stats-tooltip:focus:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
+
+.qa-stats-tooltip:before,
+[data-statstt-text] {
+	z-index: 1001;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+}
+
+.qa-stats-tooltip:after,
+[data-statstt-text]:after {
+	z-index: 1000;
+	padding: 8px;
+	width: 180px;
+	background-color: #004C71;
+	background-color: rgba(000, 076, 113, 0.9);
+	color: #FCFAF2;
+	content: attr(data-statstt-text);
+	font-size: 12px;
+	line-height: 1.4;
+	border-radius: 6px;
+	display: inline-block;
+  text-align: left;
+}
+
+[data-statstt-text]:after,
+.qa-stats-tooltip:after {
+	margin-left: -80px;
+}
+
+/* Bottom */
+[data-statstt-text]:before,
+[data-statstt-text]:after,
+.qa-stats-tooltip:before,
+.qa-stats-tooltip:after {
+	top: 100%;
+	bottom: auto;
+	left: 50%;
+}
+
+[data-statstt-text]:before,
+.qa-stats-tooltip:before {
+	margin-top: -12px;
+	margin-bottom: 0;
+	border-top-color: transparent;
+	border-bottom-color: #004C71;;
+	border-bottom-color: rgba(000, 076, 113, 0.9);
+}
+
+[data-statstt-text]:hover:before,
+[data-statstt-text]:hover:after,
+[data-statstt-text]:focus:before,
+[data-statstt-text]:focus:after,
+.qa-stats-tooltip:hover:before,
+.qa-stats-tooltip:hover:after,
+.qa-stats-tooltip:focus:before,
+.qa-stats-tooltip:focus:after {
+	-webkit-transform: translateY(12px);
+	-moz-transform:    translateY(12px);
+	transform:         translateY(12px); 
+}
+
+
+/* PV一覧表 -------------------------------------*/
+.stats_item table {
+width:100%;
+border-collapse:collapse;
+margin:0;
+border:solid 1px #ddd;
+text-align: left;
+}
+.stats_item table th{
+padding:10px 10px;
+font-size:90%;
+line-height:150%;
+color:#fff;
+border:solid 1px #ddd;
+background:#535b6e;
+text-align: center;
+}
+.stats_item table td{
+padding:10px 10px;
+font-size:90%;
+line-height:150%;
+border:solid 1px #ddd;
+}
+
+
+
+
+@media screen and (max-width: 868px){
+
+.qa-chart-access-box{
+}
+.wd40{
+	width: 80%;
+	margin: 0 auto;
+	}
+.wd30{
+	width: 40%;
+}
+	
+.wd1-6{
+	width: 33.2%;
+}
+
+}

@@ -1,0 +1,33 @@
+/**
+ 色
+ #5ab4bd = rgb(90, 180, 189)　//緑
+ #a1cce4 = rgb(161, 204, 228) //青
+*/
+.qahm_meta-box {
+  display: flex;
+}
+.qahm-meta-icon {
+  align-items: center;
+  margin: 0 10px 0 0;
+  padding-right: 5px;
+  border-right: 3px solid #f9cdc5;
+}
+.qahm-meta-contents label {
+  font-size: 14px;
+}
+.qahm-meta-contents label:hover{
+  border-bottom: solid 2px #a1cce4;
+  font-weight: bold;
+}
+.qahm-meta-checkp {
+  margin-top: 0;
+  padding: 2px 0;
+  border-bottom: 1px dotted #d3d3d3;
+}
+.qahm-meta-q-logo img {
+  width: 30px;
+  height: auto;
+}
+
+
+

@@ -1,0 +1,794 @@
+/**
+ 色
+ #5ab4bd = rgb(90, 180, 189)　//緑
+ #a1cce4 = rgb(161, 204, 228) //青
+*/
+html {
+    scroll-behavior: smooth;
+}
+.mainblue {
+    color: #69A4E2
+}
+.el_warning {
+    color: #EB8281;
+}
+
+.bl_reportField {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.bl_dashBoardH h2,.bl_reportField h2 {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 2rem 1.5rem 130px;
+    /*border-top: 2px solid #886174;*/
+    border-top: 1px solid #5A6E83;
+    background-color: white;
+    margin: 30px 0 0 0;
+    font-size: 22px;
+    color: #363D46;
+}
+.bl_dashBoardH h2#h_dashboard {
+    margin: 0;
+}
+
+.bl_dashBoardH h2:before,.bl_reportField h2:before {
+    position: absolute;
+    top: -150%;
+    left: -100px;
+    width: 200px;
+    height: 300%;
+    content: '';
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    /*background: #886174;*/
+    background: #5A6E83;
+}
+
+.bl_reportField h3 {
+    background-color: #adb4bb;
+    border-radius: 3px;
+    width: 250px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin: 5px 0 10px 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.bl_dashBoardH h2 .pv_warning a {
+	color: #f80000;
+	margin-left: 1em;
+}
+@media screen and (min-width:769px) {
+    .bl_reportField .bl_contentsArea {
+        padding: 10px 30px 25px;
+    }
+}
+.flex{
+    display:flex;
+}
+.flex_column {
+    display:flex;
+    flex-direction: column;
+}
+.flex_item {
+    align-self: left;
+}
+.flex_w_auto {
+    flex-basis: auto;
+}
+/* インフォーメーションエリア */
+.bl_infoArea {
+    background-color: white;
+    padding: 20px;
+}
+
+/* ダッシュボード */
+.bl_dashBoard {
+    padding: 0;
+    margin: 0;
+	flex-wrap: wrap;
+}
+.bl_dashBoard div{
+
+}
+
+
+/* NEW dashboard*/
+.dashboard_and_qainfo {
+    background-color: white;
+}
+.dboard_main {
+    max-width: 950px;
+}
+.dboard_side {
+    max-width: 400px;
+}
+@media screen and (max-width: 1400px){
+    .dboard_side {
+        max-width: 100%;
+    }
+}
+.qahm_dashboard {
+    display: flex;
+    flex-direction: column;
+}
+  
+.topreport_container {
+    display: flex;
+    flex-direction: column;
+}
+.topreport_column {
+    display: flex;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #eee;
+}
+.topreport_column h3 {
+    margin: 0;
+}
+.topreport_halfcolumn_ch {
+    margin-right: 48px;
+}
+.topreport_halfcolumn_post {
+}
+  
+.topreport_sessions_sect,
+.topreport_goals_sect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+div.topreport_posts_sect {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content: flex-start;
+}
+  
+.topreport_sessions_sect > div,
+.topreport_goals_sect > div,
+.topreport_posts_sect > div {
+    margin: 5px; /* 適宜マージンを設定 */
+}
+
+.topreport_table {
+    min-width: 360px;
+}
+.topreport_table_half {
+    min-width: 180px;;
+}
+div.topreport_graph {
+    max-width: 500px;
+    margin-left: 24px;
+}
+.topreport_channel_circle {
+    max-width: 250px;
+}
+
+.topmenu_container {
+    margin-top: 12px;
+}
+.topmenu_container h4 {
+    font-size: 1.1em;
+}
+
+.qahm_qainfo {
+    padding: 10px;
+}
+.qainfo_container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+p.free-or-lic {
+    text-align: right;
+    margin: 0;
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+/* お知らせとグラフエリア */
+.bl_dashContents {
+    flex-grow: 4;
+	margin-bottom: 24px;
+}
+.bl_news {
+    width: 900px;
+	max-width: 100%;
+}
+#wpbody-content .metabox-holder {
+    padding: 0 !important;
+}
+.bl_news .postbox {
+    border-radius: 3px;
+}
+.bl_news ul{
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+    border: rgba(114, 120, 128, .2) solid 1px;
+    border-radius: 3px;
+}
+.bl_grapharea {
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.bl_grapharea .bl_data {
+    width: 400px;
+}
+.bl_grapharea .bl_data table,
+.topreport_table table,
+.topreport_table_half table {
+    width: 100%;
+    border-spacing: 0;
+	margin-bottom: 24px;
+}
+.bl_grapharea .bl_data table th,
+.topreport_table table th {
+    text-align: center;
+    font-size:20px;
+    height: 40px;
+    width: 50%;
+}
+.topreport_table_half table th {
+    text-align: center;
+    font-size:16px;
+    height: 40px;
+    width: 50%;
+}
+.bl_grapharea .bl_data table tr,
+.topreport_table table tr {
+    text-align: center;
+    font-size:28px;
+    font-weight: bold;
+}
+.topreport_table_half table tr {
+    text-align: center;
+    font-size:24px;
+    font-weight: bold;
+}
+.bl_grapharea .bl_data table tr.yosoku,
+.topreport_table table tr.yosoku,
+.topreport_table_half table tr.posttotal {
+    text-align: center;
+    font-size: 14px;
+} {
+    text-align: center;
+    font-size:14px;
+}
+
+.bl_grapharea .bl_data table td,
+.topreport_table table td,
+.topreport_table_half table td {
+    height: 40px;
+}
+
+.bl_grapharea .bl_graph {
+    width: 500px;
+}
+
+.bl_report {
+    width: 900px;
+}
+.bl_report .bl_reportmenu {
+    width: 225px;
+}
+.bl_report .bl_reportmenu h4 a{
+    color: black;
+}
+
+@media screen and (max-width: 1124px){
+	.bl_grapharea div {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+}
+
+/* アノテーションエリア */
+.bl_anotation {
+    flex-grow: 1;
+	max-width: 660px;
+}
+.bl_infobox {
+    width: 260px;
+    background-color: #F0F0EA;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.bl_infobox h3 {
+    margin: 0 0 5px 0;
+    border-bottom: rgba(114, 120, 128, .2) solid 1px;
+    font-size: 110%;
+}
+.bl_infobox a {
+    text-decoration: none;
+}
+.bl_infobox p {
+    color: #727880;
+    font-size: 90%;
+}
+.bl_infobox .btn {
+    background-color: #96A587;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #96A587;
+    margin: 10px 12px 0;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.bl_infobox .btn p {
+    color: white;
+    text-decoration: none;
+}
+.bl_infobox .btn:hover {
+    background-color: #BEC7B4;
+    border: 1px solid #BEC7B4;
+}
+.bl_infobox .btn_gls {
+    background-color: #5078D1;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #5078D1;
+    margin: 10px 12px 0;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.bl_infobox .btn_gls p {
+    color: white;
+    text-decoration: none;
+}
+.bl_infobox .btn_gls:hover {
+    background-color: #abc2f5;
+    border: 1px solid #abc2f5;
+}
+.bl_infobox .status {
+    font-size: 14px;
+    margin: 10px 20px 0;
+    text-align: center;
+}
+.bl_infobox .status {
+    font-size: 14px;
+    margin: 10px 20px 0;
+    text-align: center;
+}
+.bl_infobox .status p {
+    /*color: #29470a;*/
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.bl_infobox .loadsec p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#bl_paid_bar {
+    padding-top: 1px;
+    /*padding: 10px;*/
+    background-color: #5A6E83;
+    /*background-color: #886174;*/
+    color: white;
+}
+#bl_pay_announce {
+    padding: 10px;
+    background-color: #886174;
+    color: white;
+}
+#bl_pay_announce a{
+    color: white;
+}
+.freetext {
+    color: #FF0000;
+    font-size: 125%;
+    display: inline-block;
+}
+.paidtext {
+    color: #29470a;
+    font-size: 90%;
+    display: inline-block;
+}
+.datalimit_sec {
+    margin: 20px auto 6px auto;
+}
+.el_useStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.limit_label {
+    margin: 0;
+    background-color: #bec7b4;
+    color: black;
+    font-size: 12px;
+    display: inline-block;
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+}
+.used_label {
+    margin: 0.5em 0;
+    color: #727880;
+    font-size: 12px;
+    display: inline-block;
+    padding: 1px 3px 1px 3px;
+}
+.used_num {
+    font-size: 12px;
+}
+.limit_bunbo {
+    font-size: 11px;
+}
+.bl_infobox progress {
+    margin: 0 auto 4px auto;
+    height: 16px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
+p.qasafegreen {
+    color: #29470a;
+}
+p.qagreen {
+    color: #96A587;
+}
+p.qapink  {
+    color: #EB8281;
+}
+p.qapinklimit  {
+    color: #FF0000;
+}
+.bl_infobox progress.qagreen {
+    background-color: #CDD4DA;
+}
+.bl_infobox progress.qagreen::-webkit-progress-bar {
+    background-color: #CDD4DA;
+}
+
+/* バーの進捗率の表示を変える */
+.bl_infobox progress.qagreen::-moz-progress-bar {
+    background-color: #96A587;
+}
+
+.bl_infobox progress.qagreen::-webkit-progress-value {
+    background-color: #96A587;
+}
+
+.bl_infobox progress.qapink {
+    background-color: #CDD4DA;
+}
+.bl_infobox progress.qapink::-webkit-progress-bar {
+    background-color: #CDD4DA;
+}
+
+/* バーの進捗率の表示を変える */
+.bl_infobox progress.qapink::-moz-progress-bar {
+    background-color: #EB8281;
+}
+
+.bl_infobox progress.qapink::-webkit-progress-value {
+    background-color: #EB8281;
+}
+
+.bl_infobox progress.qapinklimit {
+    background-color: #000;
+}
+.bl_infobox progress.qapinklimit::-webkit-progress-bar {
+    background-color: #000;
+}
+
+/* バーの進捗率の表示を変える */
+.bl_infobox progress.qapinklimit::-moz-progress-bar {
+    background-color: #FF0000;
+}
+
+.bl_infobox progress.qapinklimit::-webkit-progress-value {
+    background-color: #FF0000;
+}
+.realtime_num {
+    margin: 10px 0 10px 0;
+}
+.realtime_num .num_title {
+    background-color: #3A3A6B;
+    font-size: 12px;
+    color: white;
+    width: 250px;
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+}
+.bl_dayGraph {
+    width: calc(100% - 30px);
+    height: 200px;
+    flex-grow: 4;
+}
+#bl_calStickey {
+    margin-bottom: 150px;
+}
+#bl_calenderAndMenu {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: +11;
+    top: 0;
+    background-color: #F0F0EA;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #727880;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    margin-top: 10px;
+}
+#bl_homeFooter {
+    background-color: white;
+    padding: 10px;
+}
+#bl_homeFooter .bl_reportmenu {
+    width: 200px;
+}
+
+.tablejs_default {
+    background-color:#fff;
+    /*box-shadow: 0 2px 3px rgba(0,0,0,0.2);*/
+    border-bottom: solid 1.5px #eee;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.tablejs_default table {
+    width:100%;
+    border-collapse:collapse;
+    margin:0;
+    border:solid 1px #ddd;
+    text-align: left;
+}
+.tablejs_default table th{
+    padding:10px 10px;
+    font-size:90%;
+    line-height:150%;
+    color:#fff;
+    border:solid 1px #ddd;
+    background:#535b6e;
+    text-align: center;
+}
+.tablejs_default table td{
+    padding:10px 10px;
+    font-size:90%;
+    line-height:150%;
+    border:solid 1px #ddd;
+}
+hr.el_viewseparator {
+    color: #ddd;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-top: 0;
+    border-top: 0;
+}
+
+#jsSearchPageUrl {
+	max-width: 100%;
+}
+
+/** 枠組み、hタグ　------------------------------------------ */ 
+.tab_container {
+  margin: 0;
+  padding: 0 25px;
+}
+.tab_content_description {
+  margin: 0;
+}
+.tab_content_item {
+  margin: 10px;
+  padding: 20px 0;
+}
+.tab_content_item_thinbottom {
+  margin: 10px;
+  padding: 20px 0 0 0;
+}
+
+
+.left-blue_div {
+  border-left: 5px solid rgba(161, 204, 228, 0.8);
+  padding: 5px 0 5px 15px;
+}
+.back-blue_h3 {
+  background-color: rgba(161, 204, 228, 0.4);
+  padding: 8px 4px 4px;
+  border-radius: 3px;
+}
+.back-blue-grad_h3 {
+  background: linear-gradient(to right,  rgba(101, 153, 180, 0.3), #fff 75%);
+  padding: 8px 4px 4px 12px;
+  border-radius: 3px;
+}
+.back-blue-grad-center_h3 {
+  background: linear-gradient(to right, #fff 10%, rgba(101, 153, 180, 0.2), #fff 90%);
+  padding: 8px 4px 4px;
+}
+
+
+.tab_content hr {
+  border: none;
+  background: linear-gradient(to right, white, #5ab4bd, #a1cce4, white);
+  height: 2px;
+}
+
+
+/* pタグの前に三角を付ける。二重下線を引く。（ds抽出件数表示）*/
+.goal_sessionresult {
+    margin: 8px auto 1px 8px;
+    padding: 0 8px 0 8px;
+    border-bottom: 3px rgba(161,204,228,0.8) double;
+    display: inline-block;
+
+}
+.underline-double {
+  margin-bottom: 1px;
+  border-bottom: 3px rgba(161,204,228,0.8) double;
+  display: inline-block;
+}
+.sankaku:before {
+  content: "";
+  display: inline-block;
+  border: 6px solid transparent;
+  border-left-width: 1.2em;
+  box-sizing: border-box;
+  border-left-color: #2271b1;
+}
+
+.margin-eight {
+  margin: 8px 0;
+}
+
+
+
+/** タブ表示切替 ------------------------------------------ */  
+  /*タブのスタイル*/
+  .tab_item {
+	min-width: 165px;
+	height: 50px;
+	margin-right: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*border-bottom: 3px solid #5ab4bd;*/
+	background-color: #5ab4bd;
+	line-height: 50px;
+	font-size: max(1em, min(16px, 2vw));
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+	opacity: 0.75;
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+	display: none;
+  }
+
+  /*タブ切り替えの中身のスタイル*/
+  .tabs {
+	  position: relative;
+  }
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+	visibility: hidden;
+	position: absolute;
+	top:50px;
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	z-index: -1;
+  background-color: #fdfdfd;
+  padding-bottom: 20px;
+  }
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #tab_realtime:checked ~ #tab_realtime_content,
+  #tab_stats:checked ~ #tab_stats_content,
+  #tab_ds:checked ~ #tab_ds_content,
+  #design:checked ~ #design_content {
+	visibility: visible;
+	position: absolute;
+	z-index: 1;
+  }
+  
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    /*
+	background-color: #5ab4bd;
+	color: #fff;
+  */
+  background-color: #fff;
+  color: #5ab4bd;
+  /*
+  border-bottom: solid 3px #fff;
+  border-top: solid 5px #5ab4bd;
+  */
+  }
+  .visible_animation {
+    visibility: visible;
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+  }
+  @keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+/* Goal */
+.bl_goalradio {
+    display: flex;
+    gap: 1ch;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.bl_goalradio label {
+    display: inline-block;
+    margin-right: 10px;
+}
+.bl_goalBox {
+    margin: 10px;
+    border: 1px dotted #ccc;
+    padding: 5px;
+}
+.bl_goalBoxFlex {
+    width: 25%;
+}
+.bl_goalBoxChecked {
+    border: 3px rgba(161,204,228,0.8) double; !important;
+}
+.bl_goalBox p {
+    text-align: center;
+}
+.bl_goalSummary {
+    text-align: center;
+    padding: 0 5px 0 5px;
+}
+.bl_goalSummary div.flex {
+    text-align: center;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content: space-between;
+}
+.bl_goalAll {
+    font-weight: bold;
+}
+
+.goal_graph_container {
+    margin: 32px 0 12px 0;
+}
+h4.goalsearch_h {
+    margin: 0;
+    padding: 6px 12px;
+    background-color: #e5e5e5;
+    font-size: 14px;
+}
+.goalsearch_sec {
+    max-width: 1000px;
+}
+.goalsearch_inner {
+    padding: 12px;
+}
+

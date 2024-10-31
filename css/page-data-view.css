@@ -1,0 +1,118 @@
+a {
+    color: #2271b1;
+    transition-property: border,background,color;
+    transition-duration: .05s;
+    transition-timing-function: ease-in-out;
+}
+
+/* 大枠 -------------------------------------*/
+.page-data-view-container {
+	margin: 0;
+    padding: 0 25px;
+}
+
+.page-data-view-container h3 {
+    margin: 18px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.page-data-view-container h3::before {
+    left: 0;
+    top: -2.5px;
+    color: #5ab4bd;
+}
+
+.page-data-view-container h3::after {
+    left: 4.5px;
+    top: 2.5px;
+    color: #a1cce4;
+}
+
+.page-data-view-container h3::before, .page-data-view-container h3::after {
+    content: "□";
+    position: absolute;
+}
+
+.page-data-view-container hr {
+    border: none;
+    background: linear-gradient(to right, white, #5ab4bd, #a1cce4, white);
+    height: 2px;
+}
+
+/* 一覧表 -------------------------------------*/
+.ds_item table {
+	width:100%;
+	border-collapse:collapse;
+	margin:0;
+	border:solid 1px #ddd;
+	text-align: left;
+}
+
+.ds_item table th{
+	padding:10px 10px;
+	font-size:90%;
+	line-height:150%;
+	color:#fff;
+	border:solid 1px #ddd;
+	background:#535b6e;
+	text-align: center;
+}
+.ds_item table td{
+	padding:10px 10px;
+	font-size:90%;
+	line-height:150%;
+	border:solid 1px #ddd;
+}
+
+
+/* heatmap -------------------------------------*/
+.qahm-page-data {
+	color: #2271b1;
+	cursor: pointer;
+    text-decoration: underline;
+}
+
+.qahm-heatmap-link {
+	color: #2271b1;
+	cursor: pointer;
+    margin-right: 8px;
+}
+
+.qahm-heatmap-text {
+	opacity: 0.3;
+    margin-right: 8px;
+}
+
+.qahm-version-select {
+    font-size: 14px;
+    line-height: 2;
+    color: #2c3338;
+    border-color: #8c8f94;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0 24px 0 8px;
+    min-height: 30px;
+    max-width: 25rem;
+    -webkit-appearance: none;
+    background: #fff url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+    background-size: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 868px){
+
+.wd40{
+	width: 80%;
+	margin: 0 auto;
+	}
+.wd30{
+	width: 40%;
+}
+	
+.wd1-6{
+	width: 33.2%;
+}
+
+}
